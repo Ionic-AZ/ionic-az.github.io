@@ -1,0 +1,72 @@
+title:            "<span class='ionic-text'>Ionic</span> Arizona Meetup"
+description:      Arizona Developers Using Ionic
+#logo:             site-logo.png
+disqus_shortname: ionic-az
+search:           false
+# Change url to your domain. Leave localhost server or blank when working locally.
+url:              #https://ionic-az.org
+
+# Owner/author information
+owner:
+  name:           Ionic-Az
+  avatar:         #bio-photo.jpg
+  email:          organizers@ionic-az.org
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        ionic_az 
+  #facebook:       
+  github: ionic-az         
+  #stackexchange:  
+  #linkedin:       
+  #instagram:      
+  #flickr:         
+  #tumblr:         
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:    
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:   UA-70968861-1
+google_verify:      
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:         
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Newsletters
+    url: /newsletters/
+  - title: Sponsors
+    url: /sponsors/
+#  - title: Made Mistakes
+#    url: http://mademistakes.com
+#    external: true
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/Phoenix
+future:      true
+highlighter: pygments
+markdown:    kramdown
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+#permalink:   /:categories/:title/
+permalink:   /:categories/:year/:month/:day/:title/
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+
+  coderay:
+    coderay_line_numbers: 
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]

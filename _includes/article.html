@@ -1,0 +1,6 @@
+<a href="{{ include.url }}" target="_blank">**{{ include.title }}**</a>  
+{{ include.content }}  {% if include.name != null %}
+<sub>_via {{ include.name }} <a href="https://twitter.com/{{ include.twitter }}" target="_blank">@{{ include.twitter }}</a>_</sub>{% else %}
+<sub>_via <a href="https://twitter.com/{{ include.twitter }}" target="_blank">@{{ include.twitter }}</a>_</sub>
+<sub>_via [@{{ include.twitter }}](https://twitter.com/{{ include.twitter }})_</sub>
+{% endif %}
