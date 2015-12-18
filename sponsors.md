@@ -18,3 +18,10 @@ Tools, insights, and integrations to change the way you execute outbound demand 
 Providing awesome video based training courses.
 
 ----
+
+
+![Jetbrains Logo]({{site.url}}/images/sponsors/jetbrains.png) 
+
+Making professional software development a more productive and enjoyable experience.
+
+----
