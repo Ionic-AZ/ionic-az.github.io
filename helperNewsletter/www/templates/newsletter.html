@@ -1,0 +1,76 @@
+<ion-view view-title="Generate Newsletter">
+  <ion-content class="padding">
+    <form ng-submit="create(newsletterForm)">
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Newsletter Name</span>
+          <input type="text" placeholder="Newsletter #" ng-model="newsletterForm.name">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Tags</span>
+          <input type="text" placeholder="newsletter" ng-model="newsletterForm.tags">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Category</span>
+          <input type="text" placeholder="newsletters" ng-model="newsletterForm.category">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Posts Json</span>
+          <textarea placeholder="" ng-model="newsletterForm.posts" rows="10"></textarea>
+        </label>
+        <label class="item item-toggle item-stacked-label">
+          <span class="input-label">Published?</span>
+          <label class="toggle">
+            <input type="checkbox" checked ng-model="newsletterForm.publish">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </label>
+        <label class="item item-toggle item-stacked-label">
+          <span class="input-label">Allow Comments?</span>
+          <label class="toggle">
+            <input type="checkbox" checked ng-model="newsletterForm.allowComments">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </label>
+
+        <ion-toggle ng-model="newsletterForm.showShareLinks">Show Share Links?</ion-toggle>
+        <button class="button button-block button-positive">
+          Create
+        </button>
+      </div>
+    </form>
+
+   
+    <div class="padding">
+      <pre>
+---
+layout: post
+title: <i>{{newsletterForm.name}}</i>
+description: ""
+category: {{newsletterForm.category}}
+tags: [{{newsletterForm.tags}}]
+comments: {{newsletterForm.allowComments}}
+share: {{newsletterForm.showShareLinks}}
+---
+
+## Articles
+  <div ng-repeat='article in newsletterForm.postObject | articleFilter'>
+  {% include article.html url="{{article.Url}}" title="{{article.Title}}" content="{{article.Description}}" tags="{{article.Tags}}" author="{{article.Author}}" twitter="{{article.Twitter}}" %}
+ </div>
+ 
+## Recently Released
+
+<div ng-repeat="article in newsletterForm.postObject | releaseFilter"> 
+  {% include release.html url="{{article.Url}}" title="{{article.Title}}" %}
+
+ </div>
+    
+      </pre>
+    </div>
+   
+  </ion-content>
+</ion-view>
