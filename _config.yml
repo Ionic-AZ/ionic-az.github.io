@@ -4,7 +4,7 @@ description:      Arizona Developers Using Ionic
 disqus_shortname: ionic-az
 search:           false
 # Change url to your domain. Leave localhost server or blank when working locally.
-url:              https://ionic-az.org
+url:              http://ionic-az.org
 
 # Owner/author information
 owner:
