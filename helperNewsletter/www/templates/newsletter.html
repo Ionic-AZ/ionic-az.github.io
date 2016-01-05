@@ -44,10 +44,18 @@
       </div>
     </form>
 
-   
-    <div class="padding">
-      <pre>
----
+    <form ng-submit="getOutput()">
+      <div class="list">
+        <button class="button button-block button-positive">
+          Export
+        </button>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Data Output</span>
+          <textarea placeholder="" ng-model="dataOutput" rows="10"></textarea>
+        </label>
+      </div>
+    </form>
+    <div class="padding" id="output"><pre>---
 layout: post
 title: <i>{{newsletterForm.name}}</i>
 description: ""
@@ -57,20 +65,24 @@ comments: {{newsletterForm.allowComments}}
 share: {{newsletterForm.showShareLinks}}
 ---
 
-## Articles
-  <div ng-repeat='article in newsletterForm.postObject | articleFilter'>
-  {% include article.html url="{{article.Url}}" title="{{article.Title}}" content="{{article.Description}}" tags="{{article.Tags}}" author="{{article.Author}}" twitter="{{article.Twitter}}" %}
- </div>
+##Upcoming Events
+
+<div ng-repeat='article in newsletterForm.postObject | eventFilter'>
+{% include article.html url="{{article.Url}}" title="{{article.Title}}" content="{{article.Description}}" tags="{{article.Tags}}" author="{{article.Author}}" twitter="{{article.Twitter}}" %}
+</div>
+
+##Articles
+
+<div ng-repeat='article in newsletterForm.postObject | articleFilter'>
+{% include article.html url="{{article.Url}}" title="{{article.Title}}" content="{{article.Description}}" tags="{{article.Tags}}" author="{{article.Author}}" twitter="{{article.Twitter}}" %}
+</div>
  
-## Recently Released
+##Recently Released
 
 <div ng-repeat="article in newsletterForm.postObject | releaseFilter"> 
-  {% include release.html url="{{article.Url}}" title="{{article.Title}}" %}
-
- </div>
-    
-      </pre>
+{% include release.html url="{{article.Url}}" title="{{article.Title}}" %}
+</div></pre>
     </div>
-   
+
   </ion-content>
 </ion-view>

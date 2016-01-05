@@ -1,5 +1,6 @@
 <a href="{{ include.url }}" target="_blank">**{{ include.title }}**</a>  
-{{ include.content }} 
-
 {% if include.author != null %}<sub>_via {{ include.author }} <a href="https://twitter.com/{{ include.twitter }}" target="_blank">@{{ include.twitter }}</a></sub>{% elsif  include.twitter != null %}<sub>_via <a href="https://twitter.com/{{ include.twitter }}" target="_blank">@{{ include.twitter }}</a>_</sub>{% endif %}
 {% if include.tags != null %}<sub>Tags: {{include.tags}}</sub>{% endif %}
+
+{{ include.content }} 
+

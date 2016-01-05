@@ -21,6 +21,10 @@ function NewsletterController($scope, $http) {
     var posts = angular.fromJson(newsletterForm.posts);
     newsletterForm.postObject = posts;
   };
+  
+  $scope.getOutput = function () {
+    $scope.dataOutput = angular.element(output).text();    
+  }
 }
 
 angular
@@ -32,6 +36,7 @@ angular
       angular.forEach(items, function (item) {
         console.log('filter:item', item);
         if (item.Type === 'article') {
+          item.Description = item.Description.replace(/[\n\r]/g, '<br />');
           filtered.push(item);
         }
       });
@@ -45,6 +50,21 @@ angular
       angular.forEach(items, function (item) {
         console.log('filter:item', item);
         if (item.Type === 'release') {
+          item.Description = item.Description.replace(/[\n\r]/g, '<br />');
+          filtered.push(item);
+        }
+      });
+      return filtered;
+    };
+  })
+  .filter('eventFilter', function () {
+    return function (items) {
+      if (items === undefined) { return; }
+      var filtered = [];
+      angular.forEach(items, function (item) {
+        console.log('filter:item', item);
+        if (item.Type === 'event') {
+          item.Description = item.Description.replace(/[\n\r]/g, '<br />');
           filtered.push(item);
         }
       });
