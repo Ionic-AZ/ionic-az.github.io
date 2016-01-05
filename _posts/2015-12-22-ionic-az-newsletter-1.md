@@ -6,6 +6,7 @@ category: newsletter
 tags: [newsletter]
 comments: true
 share: true
+date: 2015-12-22 10:45
 ---
 
 ## Articles
