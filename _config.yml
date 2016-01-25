@@ -42,6 +42,10 @@ links:
     url: /newsletters/
   - title: Sponsors
     url: /sponsors/
+  - title: '<i class="icon-rss"></i> Feed'
+    url: "http://feeds.feedburner.com/IonicArizonaMeetup"
+    external: true
+    feed: true
 #  - title: Made Mistakes
 #    url: http://mademistakes.com
 #    external: true

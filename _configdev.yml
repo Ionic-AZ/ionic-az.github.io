@@ -1,4 +1,16 @@
 url: http://localhost:4000
 google_analytics:  
 testsite: true
-future: false 
+future: true 
+links:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Newsletters
+    url: /newsletters/
+  - title: Sponsors
+    url: /sponsors/
+  - title: '<i class="icon-rss"></i> Feed'
+    url: "/Feed.xml"    
+    feed: true

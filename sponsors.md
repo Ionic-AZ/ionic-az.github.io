@@ -17,11 +17,23 @@ Tools, insights, and integrations to change the way you execute outbound demand 
 
 Providing awesome video based training courses.
 
+[http://pluralsight.com](http://pluralsight.com)
+
 ----
 
 
 ![Jetbrains Logo]({{site.url}}/images/sponsors/jetbrains.png) 
 
 Making professional software development a more productive and enjoyable experience.
+
+[http://jetbrains.com](http://jetbrains.com)
+
+----
+
+![Manning Logo]({{site.url}}/images/sponsors/manning.jpeg) 
+
+Making professional software development a more productive and enjoyable experience.
+
+[http://manning.com](http://manning.com)
 
 ----
