@@ -1,0 +1,18 @@
+    
+ncftp -u "$USERNAME" -p "$PASSWORD" $HOST<<EOF
+rm -rf site/wwwroot
+mkdir site/wwwroot
+quit
+EOF
+
+cd _site
+rm robots.txt
+touch robots.txt
+echo -e "# robots.txt generated at http://www.mcanerin.com" >> robots.txt
+echo -e "User-agent: *" >> robots.txt
+echo -e "Disallow: /" >> robots.txt
+echo -e "Disallow: /cgi-bin/" >> robots.txt
+
+ncftpput -R -v -u "$USERNAME" -p "$PASSWORD" $HOST /site/wwwroot .
+
+htmlproof ./_site --only-4xxhtmlproof ./_site --only-4xx

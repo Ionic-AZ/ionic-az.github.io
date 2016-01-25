@@ -18,7 +18,7 @@
 </div><!-- /.navigation-wrapper -->
 
 {% include browser-upgrade.html %}
-
+{% if site.testsite %}<div style="text-align: center;background-color: yellow;height: 75px;padding: 5px 5px 5px 5px;width:100%"><h3 style="color:black">Test Site!  Real site at <a href="http://ionic-az.org">http://ionic-az.org</a></h3></div>{% endif %}
 {% if site.search %}<div class="search-wrapper">
 	<div class="search-form">
 		<input type="text" class="search-field" placeholder="Search...">
@@ -43,3 +43,4 @@
 		<h2 class="site-description animated fadeIn" itemprop="description">{{ site.description }}</h2>
 	</div>
 </header><!-- /.masthead -->{% endif %}
+

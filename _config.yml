@@ -5,6 +5,8 @@ disqus_shortname: ionic-az
 search:           false
 # Change url to your domain. Leave localhost server or blank when working locally.
 url:              http://ionic-az.org
+future: false
+safe: true
 
 # Owner/author information
 owner:
@@ -46,7 +48,6 @@ links:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/Phoenix
-future:      true
 highlighter: pygments
 markdown:    kramdown
 
@@ -69,4 +70,4 @@ kramdown:
     coderay_css: class
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "helperNewsletter", "old"]
+exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "helperNewsletter", "old", ".travis.yml", "run.bat", "drafts.bat"]
