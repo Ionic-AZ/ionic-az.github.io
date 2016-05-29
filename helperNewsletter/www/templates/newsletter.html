@@ -65,19 +65,19 @@ comments: {{newsletterForm.allowComments}}
 share: {{newsletterForm.showShareLinks}}
 ---
 
-##Upcoming Events
+## Upcoming Events
 
 <div ng-repeat='article in newsletterForm.postObject | eventFilter'>
 {% include article.html url="{{article.Url}}" title="{{article.Title}}" content="{{article.Description}}" tags="{{article.Tags}}" author="{{article.Author}}" twitter="{{article.Twitter}}" %}
 </div>
 
-##Articles
+## Articles
 
 <div ng-repeat='article in newsletterForm.postObject | articleFilter'>
 {% include article.html url="{{article.Url}}" title="{{article.Title}}" content="{{article.Description}}" tags="{{article.Tags}}" author="{{article.Author}}" twitter="{{article.Twitter}}" %}
 </div>
  
-##Recently Released
+## Recently Released
 
 <div ng-repeat="article in newsletterForm.postObject | releaseFilter"> 
 {% include release.html url="{{article.Url}}" title="{{article.Title}}" %}
