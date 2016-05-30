@@ -18,7 +18,6 @@ date: 2016-05-30 06:00
 
 {% include article.html url="http://www.meetup.com/Ionic-AZ/events/230709047/" title="Ionic Az Monthly Meeting - July 26th 6:30pm-9pm" content="Come learn all about ionic2 and see all of the cool new features.  We will be co-meeting with the ng-phx group" tags="ionic2" author="ionic-az" twitter="ionic_az" %}
 
-
 ## Articles
 
 
